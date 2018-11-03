@@ -10,15 +10,21 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Economitrics",
+    "Econometrics",
     "Applied Finance"
   ]
 
 # List your qualifications (such as academic degrees).
+
+[[education.courses]]
+  course = "Master of Applied Econometrics"
+  institution = "Melbourne University"
+  year = 2019
+  
 [[education.courses]]
   course = "Bachelor of Commerce (Accounting & Finance)"
   institution = "Monash University"
-  year = 2018
+  year = 2015
 
 [[education.courses]]
   course = "Founduation Year"
@@ -29,4 +35,4 @@ weight = 5
 
 # Biography
 
-Danyang Dai(Daidai) is a graduated student from Monash University studying Accounting and Finance. 
+Danyang Dai(Daidai) is a graduated student from Monash University studying Accounting and Finance. Will be doing Master of Applied Econometrics in Melbourne University in 2019. 
