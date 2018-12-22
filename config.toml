@@ -246,7 +246,12 @@ enableGitInfo = false
     icon = "github"
     icon_pack = "fab"
     link = "//github.com/DanyangDai"
-
+  
+  [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fab"
+    link = "http://www.linkedin.com/in/danyang-dai-7529b4152/"
+    
   # Link to a PDF of your resume/CV from the About widget.
   # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
   # [[params.social]]
