@@ -11,6 +11,7 @@ weight = 5
 [interests]
   interests = [
     "Econometrics",
+    "R programing",
     "Applied Finance"
   ]
 
