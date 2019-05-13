@@ -1,7 +1,7 @@
 ---
 title: "中信保诚资产管理部实习报告"
 author: "戴丹杨"
-date: "2018 Sep 20th"
+date: "Sep 30, 2018"
 tags: [Internship]
 ---
 **实习收获**  

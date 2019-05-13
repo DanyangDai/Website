@@ -240,7 +240,7 @@ enableGitInfo = false
   [[params.social]]
     icon = "envelope"
     icon_pack = "fas"
-    link = "mailto:daidanyang_bj@sina.com"
+    link = "mailto:danyangd@student.unimelb.edu.au"
 
   [[params.social]]
     icon = "github"
