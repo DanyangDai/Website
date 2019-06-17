@@ -12,7 +12,7 @@ weight = 5
   interests = [
     "Econometrics",
     "R programing",
-    "Applied Finance"
+    "Applied Economics"
   ]
 
 # List your qualifications (such as academic degrees).

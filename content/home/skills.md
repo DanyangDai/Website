@@ -22,20 +22,20 @@ weight = 7
 # * ai - academic icons (see https://jpswalsh.github.io/academicons/)
 
 [[feature]]
-  icon = "handshake"
-  icon_pack = "far"
-  name = "Communication"
+  icon = "r-project"
+  icon_pack = "fab"
+  name = "R coding enthusiast"
   description = "80%"
   
 [[feature]]
-  icon = "chart-line"
+  icon = "laptop-code"
   icon_pack = "fas"
-  name = "Accounting and Finance Analysis"
-  description = "80%"  
+  name = "SAS"
+  description = "70%"  
   
 [[feature]]
-  icon = "paw"
+  icon = "database"
   icon_pack = "fas"
-  name = "Love Animals"
-  description = "100%"  
+  name = "SQL"
+  description = "60%"  
 +++
