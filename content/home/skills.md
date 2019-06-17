@@ -24,7 +24,7 @@ weight = 7
 [[feature]]
   icon = "r-project"
   icon_pack = "fab"
-  name = "R coding enthusiast"
+  name = "R"
   description = "80%"
   
 [[feature]]

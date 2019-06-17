@@ -62,7 +62,7 @@ enableGitInfo = false
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   
   # Details for the Contact Widget
-  email = "daidanyang_bj@sina.com"
+  email = "danyangd@student.unimelb.edu.au"
   address = ""
   office_hours = ""
   phone = ""
