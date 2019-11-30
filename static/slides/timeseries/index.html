@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <title>An Empircial Investigation into the Growing Global Financial Implications of China</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Wilbur Kueter-Luks" />
+    <meta name="author" content="Xiaowan Wang" />
+    <meta name="author" content="Danyang Dai" />
+    <meta name="author" content="Chang Liu" />
+    <meta name="author" content="Zongmin Mei" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# An Empircial Investigation into the Growing Global Financial Implications of China
+## Slides<a href="https://danyangdai.github.io/ECOM90004"target="_blank">“<a href="https://danyangdai.github.io/ECOM90004" class="uri">https://danyangdai.github.io/ECOM90004</a>”</a>
+### Wilbur Kueter-Luks
+### Xiaowan Wang
+### Danyang Dai
+### Chang Liu
+### Zongmin Mei
+### 2019/10/23
+
+---
+
+class: center, middle 
+
+
+## China's Influence in the Global Financial Market - Volatility Index 
+
+.pull-left[.center[  
+![](https://media.giphy.com/media/Ae6zESb3i5g9W/giphy.gif)]]
+
+.pull-right[
+### The research question posed to this end is whether volatility in China has a significant impact on volatility in other markets and whether this impact has been increasing over time. 
+]
+---
+## Contents
+
+### Data
+### VAR and Structural VAR
+### Granger Causality
+### Variance Decompositions 
+### Diebold-Yilmaz Spillover Index 
+### Conclusion
+---
+## Data 
+.center[![](pic.png)]
+
+---
+## Data
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Stock Market &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Volatility Index &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; China &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; ETF VIX &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Hong Kong &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; HSIVIX &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; The US &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; S&amp;amp;P500 VIX &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Japan &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Nikkei VIX &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Australia &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; S&amp;amp;P/ASX 200 VIX &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; France &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; CAC 40 VIX &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; India &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; India VIX &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+.left[
+There is a nascent body of literature documenting the fact that shocks to the once isolated Chinese stock market are having greater implications for financial markets all over the world.]
+---
+## Data 
+
+.center[
+&lt;img src="index_files/figure-html/plot-1.gif" width="700px" /&gt;
+] 
+.left[
+- First Period: 1 June 2013 to 29 May 2015
+- Second Period: 1 June 2015 to 30 June 2016
+- Thrid Period: 1 July 2016 tp 29 June 2018]
+---
+## VAR and Structural VAR
+
+.center[![](var.png)]
+
+
+.left[
+- The variables used in this VAR are volatility indices for seven different financial markets. A seven-variate VAR is estimated for each period and the lag length is chosen according to the Hannan-Quinn information Criteria.
+- In the periods before and after the stock market crash the optimal lag length is 2 and during the crash period, the optimal lag is 1.
+]
+
+---
+## VAR and Structural VAR
+
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Stock Market &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Running Hour of the Stock Market in (UTC) &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; China &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1:30-7:00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Hong Kong &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 1:30-8:00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Japan &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0:00-6:00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Australia &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 0:00-6:00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; India &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 3:45-10:00 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; France &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 8:00-16:30 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; The US &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 14:30-21:00 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+  
+.left[
+The Cholesky ordering is based on the open time for the relevant stock markets. Since the influence of the Chinese financial market is being investigated, the Chinese volatility index will be put first.
+]
+---
+## Granger Causality
+.pull-left[ 
+.left[
+- During the post-crash period, the granger causality test tells us that the volatility in none of the stock markets included in the sample are being granger caused by the volatility in the China stock market.
+- The individual p-value for the relevant granger causality test indicate that in the during and post-crash periods China’s volatility granger causes the volatility in three of the other stock markets including HK, Japan and India.
+]]
+.pull-right[ 
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Stock Market &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Pre &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; During &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Post &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Hong Kong &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0006 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0086 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0290 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Japan &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0604 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.3039 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0063 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Australia &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0404 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0271 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1996 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; India &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1974 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0218 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0001 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; France &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1220 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4176 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2620 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; The US &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4692 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9802 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2276 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+---
+## Granger Causality
+
+.pull-left[ 
+.left[
+- The overall p values for China in these granger causality test lead to the conclusion that it is exogeneous in the last period and endogenous in the first 2 periods.
+- This result suggests that China is moving away from being a stock market that it is influenced by volatility in other stock market to one that influences and cause volatility in other financial markets. China does not granger cause France or US in any periods. 
+]]
+
+.pull-right[ 
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Stock Market &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Pre &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; During &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; Post &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Hong Kong &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0006 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0086 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0290 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Japan &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0604 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.3039 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0063 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Australia &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0404 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0271 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1996 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; India &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1974 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0218 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.0001 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; France &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.1220 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4176 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2620 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; The US &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.4692 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.9802 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.2276 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+---
+## Variance Decompositions 
+
+.center[![](vd1.png)]
+---
+## Variance Decompositions 
+### Immediate Effect - After 1 Day
+
+.pull-left[
+- For Japan, about 18% variation due to the variation in China’s stock market in during-period, and only 3% in pre-period. 
+- For India, France, and The US, there are large increases in their variation that is due to the variation in the Chinese stock market in During-crash period comparing to the pre-crash period. 
+]
+
+.pull-right[![](vd2.png)]
+---
+## Variance Decompositions 
+### Short Term Effect - After 1 Week 
+.pull-left[ 
+- In general there is a large spike in the percentage variance in forecasted volatility in each stock market that is due to the variance in china’s stock market in the during period. 
+- In period after crash, these percentages fall to a level but they still higher than that in the pre-crash period. 
+]
+
+.pull-right[![](vd3.png)]
+---
+## Variance Decompositions 
+### Long Term Effect - After 1 Month 
+.pull-left[ 
+- For the US market, only 18% of the variation is due to the variation in china’s stock market in pre-crash period.
+- The percentage suddenly jump up to 45% in during-crash period. After that, in post-crash period, the percentage even increase to 60%. 
+- All of them have shown the evidence of increasing influence of China’s stock market.
+]
+
+.pull-right[![](vd4.png)]
+---
+## Diebold-Yilmaz Spillover Index 
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; H=1(one day after shock)  &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; H=5(one week after shock)  &lt;/th&gt;
+   &lt;th style="text-align:right;"&gt; H=25(one month after shock)  &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; pre-crisis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.16691 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.27544 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.40123 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; during-crisis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.40064 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.58175 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.67241 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; post-crisis &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.19097 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.43093 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 0.56084 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+.left[
+- The statistics summary of the spillover indexes calculated is shown in Table 5 for three different forecast horizons of 1, 5 and 25, which correspond to a day, week and month respectively, for the pre-crisis, crisis and post-crisis periods. 
+-Firstly, the spillover between markets increases with the forecast horizon increasing. 
+-	Secondly, the highest degree of the spillover between the markets is considered during the period covered by China’s stock market crash, by comparing the spillover indexes of the same horizon across pre-crisis, during-crisis and post-crisis periods.
+ ]
+ 
+---
+## Diebold-Yilmaz Spillover Index 
+
+.left[
+- Firstly, there is a large spike in this measure in the period covered by China’s stock market crash. 
+- Secondly, the index increases in the post-crash period relative to the pre-crash period. 
+- Link: The variations in volatility in each stock market that is due to variations in China’s stock market volatility.
+- It provides a suggestive evidence that the increase in the spillover over the same period is driven by China.]
+.center[![](spill1.png)]
+
+---
+## Conclusion
+.center[
+&lt;img src="index_files/figure-html/plot2-1.gif" width="700px" /&gt;
+]
+---
+## Conclusion
+.center[![](dis1.jpg)]
+
+---
+class: center, middle 
+
+.center[![](far.png)]
+
+
+---
+class: center, middle 
+background-image:url(chilli.jpg)
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;  
+# Thank You
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();</script>
+
+<script>
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
