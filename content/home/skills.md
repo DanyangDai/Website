@@ -25,17 +25,17 @@ weight = 7
   icon = "r-project"
   icon_pack = "fab"
   name = "R coding enthusiast"
-  description = "80%"
+  description = "Data Disualization, Forecasting, Regression Analysis, Shiny Apps, Website Development"
+  
+[[feature]]
+  icon = "laptop-code"
+  icon_pack = "fas"
+  name = "Stata"
+  description = "Regression Analysis"  
   
 [[feature]]
   icon = "laptop-code"
   icon_pack = "fas"
   name = "SAS"
-  description = "70%"  
-  
-[[feature]]
-  icon = "database"
-  icon_pack = "fas"
-  name = "SQL"
-  description = "60%"  
+  description = "Linear Programing and IML"  
 +++
