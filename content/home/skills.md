@@ -36,6 +36,6 @@ weight = 7
 [[feature]]
   icon = "laptop-code"
   icon_pack = "fas"
-  name = "SAS"
-  description = "Linear Programing and IML"  
+  name = "Matlab"
+  description = "Statistical Analysis"  
 +++

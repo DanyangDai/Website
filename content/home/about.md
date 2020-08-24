@@ -36,4 +36,4 @@ weight = 5
 
 # Biography
 
-Danyang Dai(Daidai) is a first year master student studying applied econometrics in the University of Melbourne. 
+Danyang Dai(Daidai) is currently a Masters student at The University of Melbourne major in Applied Econometrics and due to graduate at the end of 2020. She joined R Ladies Melbourne organisation committee in 2020. She cofounded the [Equity Research Organsition](https://equityresearch.netlify.app/) at the University of Melbourne and build the club webiste using Blogdown. She is looking for data analysis related jobs in Melbourne area. 
