@@ -36,6 +36,5 @@ weight = 5
 
 # Biography
 
-Danyang Dai(Daidai) is currently a Masters student at The University of Melbourne major in Applied Econometrics and due to graduate at the end of 2020. She joined R Ladies Melbourne organisation committee in 2020. She cofounded the [Equity Research Organsition](https://equityresearch.netlify.app/) at the University of Melbourne and build the club webiste using Blogdown. She is passionate about Time Series Analysis and Applied Econometrics. Her research thesis supervised by Professor Kalvinder Shields is about Official and Online Inflation Spillover analysis of the
-euro area. 
+Danyang Dai(Daidai) is currently a Masters student at The University of Melbourne major in Applied Econometrics and due to graduate at the end of 2020. She joined R Ladies Melbourne organisation committee in 2020. She cofounded the [Equity Research Organsition](https://equityresearch.netlify.app/) at the University of Melbourne and build the club webiste using Blogdown. She is passionate about Time Series Analysis and Applied Econometrics. Her research thesis supervised by Professor Kalvinder Shields is about Official and Online Inflation Spillover analysis of the euro area. 
 
